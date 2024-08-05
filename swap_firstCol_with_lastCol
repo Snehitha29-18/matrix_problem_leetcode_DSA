@@ -1,0 +1,21 @@
+//  java program to swap first col with last col
+public class Main{
+    public static void main(String[] args){
+        int[][] matrix = {{1,2,3},
+                          {4,5,6},
+                          {7,8,9}};
+        int col1 = 0;
+        int col2 = matrix.length-1;
+        for(int row=0;row<matrix.length;row++){
+            int temp = matrix[row][col1];
+            matrix[row][col1] = matrix[row][col2];
+            matrix[row][col2] = temp;
+        }
+        for(int row =0;row<matrix.length;row++){
+            for(int col = 0;col<matrix.length;col++){
+                System.out.print(matrix[row][col] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
