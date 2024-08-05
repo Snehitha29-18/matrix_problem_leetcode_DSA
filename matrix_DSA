@@ -1,0 +1,28 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("Enter number of rows u want: ");
+        int n = sc.nextInt();
+        System.out.println("Enter number of cols u want: ");
+        int m = sc.nextInt();
+        
+        int[][] matrix = new int[n][m];
+        // insert elements
+        System.out.println("Enter the elemnents into the matrix : ");
+        
+        for(int i=0;i<n;i++){
+            for(int j =0;j<n;j++){
+                matrix[i][j] = sc.nextInt();
+            }
+            System.out.println();
+        }
+        //print the matrix
+        for(int i =0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
