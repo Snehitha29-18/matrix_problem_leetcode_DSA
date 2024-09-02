@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main {
+
+    static int medianMatrix(int[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        ArrayList<Integer> al = new ArrayList<>();
+        
+        // Add all elements of the matrix to the ArrayList
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                al.add(matrix[i][j]);
+            }
+        }
+        
+        // Sort the ArrayList
+        Collections.sort(al);
+        
+        // Find the median
+        int x = al.size();
+        int medianIndex = x / 2;
+        
+        // Return the median value
+        return al.get(medianIndex);
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = { 
+            { 1, 3, 5 }, 
+            { 2, 6, 9 }, 
+            { 3, 6, 9 } 
+        };
+        int ans = medianMatrix(matrix);
+        System.out.print(ans); // Output: 5
+    }
+}
